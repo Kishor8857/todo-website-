@@ -1,0 +1,328 @@
+/* General Styles */
+h1 {
+    color: aqua;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+}
+
+/* ============ ABOUT PAGE ============ */
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    text-align: center;
+    color: #ff1493;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-section {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #ff1493;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.about-section p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    color: #333;
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.features-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00ffff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ============ HOME PAGE TASK LIST ============ */
+.task-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.task-item {
+    background: white;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff1493;
+    transition: all 0.3s ease;
+    max-width: 800px;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-title {
+    color: #ff1493;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.task-desc {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.task-actions a, button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.action-complete {
+    background: #00ff00;
+    color: #000;
+}
+
+.action-complete:hover {
+    background: #00dd00;
+    transform: scale(1.05);
+}
+
+.action-delete {
+    background: #ff0000;
+    color: white;
+}
+
+.action-delete:hover {
+    background: #dd0000;
+    transform: scale(1.05);
+}
+
+.action-update {
+    background: #00ffff;
+    color: #000;
+}
+
+.action-update:hover {
+    background: #00dddd;
+    transform: scale(1.05);
+}
+
+.action-restore {
+    background: #ffa500;
+    color: white;
+}
+
+.action-restore:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+}
+
+.bulk-actions {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bulk-actions a, button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.bulk-complete-all {
+    background: #00ff00;
+    color: #000;
+}
+
+.bulk-complete-all:hover {
+    background: #00dd00;
+    transform: scale(1.05);
+}
+
+.bulk-delete-all {
+    background: #ff0000;
+    color: white;
+}
+
+.bulk-delete-all:hover {
+    background: #dd0000;
+    transform: scale(1.05);
+}
+
+.bulk-restore-all {
+    background: #ffa500;
+    color: white;
+}
+
+.bulk-restore-all:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+}
+
+/* ============ FORMS (ADD & UPDATE) ============ */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 3px solid #ff1493;
+}
+
+.form-container h1 {
+    color: #ff1493;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #ff1493;
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.3);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 20, 147, 0.4);
+}
+
+.form-submit:active {
+    transform: translateY(-1px);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .task-item {
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .task-actions {
+        flex-direction: column;
+    }
+
+    .task-actions a, button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .bulk-actions {
+        flex-direction: column;
+    }
+
+    .bulk-actions a, button {
+        width: 100%;
+    }
+}

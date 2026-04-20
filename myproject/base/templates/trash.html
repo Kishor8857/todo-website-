@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>TRASH - DELETED TASKS</h1>
+<div class="task-container">
+    {% if data %}
+        {% for i in data %}
+        <div class="task-item">
+            <div class="task-title">🗑 {{i.title}}</div>
+            <div class="task-desc">{{i.desc}}</div>
+            <div class="task-actions">
+                <a href="{% url 'restore_t' i.id %}" class="action-restore">↶ RESTORE</a>
+                <a href="{% url 'delete_t' i.id %}" class="action-delete">✕ PERMANENTLY DELETE</a>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="task-item" style="text-align: center; color: #999;">
+            <p style="font-size: 1.2em;">Trash is empty!</p>
+        </div>
+    {% endif %}
+    
+    <div class="bulk-actions">
+        <a href="{% url 'restore_allt' %}" class="bulk-restore-all">↶ RESTORE ALL</a>
+        <a href="{% url 'delete_allt' %}" class="bulk-delete-all">DELETE ALL</a>
+    </div>
+</div>
+{% endblock %}

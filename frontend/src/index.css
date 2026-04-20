@@ -1,0 +1,490 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+/* ============ NAVIGATION STYLING ============ */
+nav {
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(90deg, #ff1493 0%, #ff69b4 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav .logo h1 {
+  color: #00ffff;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+
+nav .links {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #00ffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav .links a.active {
+  background: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+nav .links a::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00ffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav .links a:hover::after {
+  width: 100%;
+}
+
+/* ============ ABOUT PAGE ============ */
+.about-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  text-align: center;
+  color: #ff1493;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-section {
+  background: white;
+  padding: 25px;
+  border-left: 5px solid #ff1493;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  color: #ff1493;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.about-section p {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  color: #333;
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.features-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* ============ HOME PAGE TASK LIST ============ */
+h1 {
+  color: aqua;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2.2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.task-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.task-item {
+  background: white;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #ff1493;
+  transition: all 0.3s ease;
+  max-width: 800px;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-title {
+  color: #ff1493;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.task-desc {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.task-actions a, .task-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.action-complete {
+  background: #00ff00;
+  color: #000;
+}
+
+.action-complete:hover {
+  background: #00dd00;
+  transform: scale(1.05);
+}
+
+.action-delete {
+  background: #ff0000;
+  color: white;
+}
+
+.action-delete:hover {
+  background: #dd0000;
+  transform: scale(1.05);
+}
+
+.action-update {
+  background: #00ffff;
+  color: #000;
+}
+
+.action-update:hover {
+  background: #00dddd;
+  transform: scale(1.05);
+}
+
+.action-restore {
+  background: #ffa500;
+  color: white;
+}
+
+.action-restore:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+
+.bulk-actions {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bulk-actions a, .bulk-actions button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.bulk-complete-all {
+  background: #00ff00;
+  color: #000;
+}
+
+.bulk-complete-all:hover {
+  background: #00dd00;
+  transform: scale(1.05);
+}
+
+.bulk-delete-all {
+  background: #ff0000;
+  color: white;
+}
+
+.bulk-delete-all:hover {
+  background: #dd0000;
+  transform: scale(1.05);
+}
+
+.bulk-restore-all {
+  background: #ffa500;
+  color: white;
+}
+
+.bulk-restore-all:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* ============ FORM STYLING ============ */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff1493;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ff1493;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.form-submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff1493 0%, #ff69b4 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============ EMPTY STATE ============ */
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  nav .links {
+    gap: 15px;
+  }
+
+  nav .links a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  nav .logo,
+  nav .links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav .logo h1 {
+    font-size: 1.5em;
+  }
+
+  nav .links {
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  nav .links a {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .task-container {
+    padding: 10px;
+  }
+
+  .task-item {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  .task-actions a,
+  .task-actions button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .about-container {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .logo h1 {
+    font-size: 1.2em;
+  }
+
+  nav .links {
+    gap: 8px;
+  }
+
+  nav .links a {
+    font-size: 0.85em;
+    padding: 6px 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+
+  .task-title {
+    font-size: 1.2em;
+  }
+
+  .bulk-actions {
+    flex-direction: column;
+  }
+
+  .bulk-actions button,
+  .bulk-actions a {
+    width: 100%;
+  }
+}

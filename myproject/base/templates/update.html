@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1>UPDATE TASK</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Task Title</label>
+            <input type="text" name="title" id="title" value="{{data.title}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="desc">Task Description</label>
+            <input type="text" name="desc" id="desc" value="{{data.desc}}" required>
+        </div>
+
+        <button type="submit" class="form-submit">✓ UPDATE TASK</button>
+    </form>
+</div>
+{% endblock %}

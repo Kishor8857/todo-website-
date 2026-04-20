@@ -1,0 +1,62 @@
+import React from 'react';
+
+function About() {
+  return (
+    <div className="about-container">
+      <h1 className="about-title">About Our Task Manager</h1>
+
+      <div className="about-content">
+        <section className="about-section">
+          <h2>Welcome</h2>
+          <p>
+            Our Task Manager is a simple yet powerful tool designed to help you organize
+            and manage your daily tasks efficiently. Whether you're managing personal
+            projects or collaborative work, our application provides an intuitive interface
+            to keep you productive.
+          </p>
+        </section>
+
+        <section className="about-section">
+          <h2>Features</h2>
+          <ul className="features-list">
+            <li>
+              <strong>Create Tasks:</strong> Easily add new tasks to your task list
+            </li>
+            <li>
+              <strong>Mark Complete:</strong> Check off tasks as you complete them
+            </li>
+            <li>
+              <strong>Update Tasks:</strong> Edit and modify your existing tasks
+            </li>
+            <li>
+              <strong>Move to Trash:</strong> Safely delete tasks to a trash folder
+            </li>
+            <li>
+              <strong>Organize:</strong> Keep your tasks organized and prioritized
+            </li>
+          </ul>
+        </section>
+
+        <section className="about-section">
+          <h2>How to Use</h2>
+          <p>
+            Simply navigate to the home page to start managing your tasks. Add new tasks,
+            mark them as complete when done, update them if needed, or move them to trash
+            if you change your mind. It's that simple!
+          </p>
+        </section>
+
+        <section className="about-section">
+          <h2>About Us</h2>
+          <p>
+            This application was built with React and Django to provide a lightweight,
+            efficient solution for personal task management. We believe in simplicity and
+            functionality combined to deliver the best user experience.
+          </p>
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default About;
